@@ -1,0 +1,23 @@
+{
+  "canisters": {
+    "embryo_dao": {
+      "main": "src/backend/main.mo",
+      "type": "motoko"
+    },
+    "assets": {
+      "dependencies": ["embryo_dao"],
+      "frontend": {
+        "entrypoint": "dist/index.html"
+      },
+      "source": ["dist/"],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "vessel sources",
+      "args": ""
+    }
+  },
+  "version": 1
+}

@@ -1,0 +1,58 @@
+type User = 
+ record {
+   age: nat;
+   name: text;
+ };
+type Result_2 = 
+ variant {
+   err: text;
+   ok;
+ };
+type Result_1 = 
+ variant {
+   err: text;
+   ok: User;
+ };
+type Result = 
+ variant {
+   err: text;
+   ok: text;
+ };
+type ProposalState = 
+ variant {
+   accepted;
+   open;
+   rejected;
+ };
+type Proposal = 
+ record {
+   alreadyVoted: vec principal;
+   creator: principal;
+   description: text;
+   noVote: nat;
+   proposalId: nat;
+   state: ProposalState;
+   yesVote: nat;
+ };
+service : {
+  createNewUser: (User) -> (text);
+  deleteUser: () -> (Result_2);
+  getAllProposals: () -> (vec record {
+                                nat;
+                                Proposal;
+                              }) query;
+  getProposal: (nat) -> (variant {
+                           Err: text;
+                           Ok: opt Proposal;
+                         }) query;
+  getUser: () -> (Result_1) query;
+  submitProposal: (text) -> (variant {
+                               Err: text;
+                               Ok: Proposal;
+                             });
+  updateUser: (User) -> (Result);
+  vote: (nat, bool) -> (variant {
+                          Err: text;
+                          Ok;
+                        });
+}
