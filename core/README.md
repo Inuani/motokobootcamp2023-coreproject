@@ -1,19 +1,22 @@
-# svelte-vite-ts-tailwind-postcss-dfx
+# Embryo Dao - experimental project
 
-to use this template run
+The project is deployed on the mainnet
+at this address :
 
-`npx degit letmejustputthishere/svelte-vite-ts-tailwind-postcss-dfx my-new-project-name`
+https://6mor4-vyaaa-aaaan-qc2wa-cai.ic0.app/
 
-# Prerequisites
+The frontend is not displaying the proposals
+on the home page
+but it is working on my local replica.
 
-- node 16.13.0 , npm 9.3.1
-- [vessel](https://github.com/dfinity/vessel) (if you dont need vessel, remove the string in `packtool` in `dfx.json`)
-- latest version of [dfx](https://sdk.dfinity.org/docs/quickstart/local-quickstart.html#step-1-install-the-dfx-software-development-kit)
+Also I did not find a way to make the image of
+the logo appear.
 
-# Getting Started
+Here is the backend canister with all the functions :
 
-`cd my-new-project-name`
+https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.ic0.app/?id=6lpxi-yaaaa-aaaan-qc2wq-cai
 
-`npm install`
+Next thing to work on :
+create a button to create a proposal
+when someone is connected.
 
-`npm run dev`
